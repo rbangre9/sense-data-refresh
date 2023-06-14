@@ -33,7 +33,8 @@ def main(dp_1, dp_2):
         print('Invalid Dataset Shape')
         return
 
-    res = {i : "Match" if check_duplicate_column(dataset1.iloc[:, i], dataset2[:, i]) 
+    res = {i : "Match" if check_duplicate_column(dataset1.iloc[:, i], dataset2.iloc[:, i]) 
+
            else "Not Matched" for i in range(numColumns)}
 
     print(res)
